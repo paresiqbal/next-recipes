@@ -7,6 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 interface Recipe {
   title: string;
@@ -32,6 +35,10 @@ export default async function Home() {
         {recipes.map((recipe) => (
           <Card key={recipe.id}>
             <CardHeader>
+              <Avatar>
+                <AvatarImage src={`/img/${recipe.image}`} alt="recipe image" />
+                <AvatarFallback>{recipe.title.slice(0, 2)}</AvatarFallback>
+              </Avatar>
               <div>
                 <CardTitle>{recipe.title}</CardTitle>
                 <CardDescription>{recipe.time}</CardDescription>
