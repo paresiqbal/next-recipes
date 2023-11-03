@@ -31,6 +31,7 @@ export default async function Home() {
 
   return (
     <main>
+      <h1>All recipes</h1>
       <div className="grid grid-cols-3 gap-8">
         {recipes.map((recipe) => (
           <Card key={recipe.id}>
