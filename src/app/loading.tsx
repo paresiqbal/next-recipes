@@ -5,8 +5,8 @@ export default function loading() {
   return (
     <main>
       <div className="grid grid-cols-3 gap-8">
-        {"abcdefghi".split(" ").map((i) => (
-          <SkeletonCard key={i} />
+        {"abcdefghi".split("").map((i, index) => (
+          <SkeletonCard key={index} />
         ))}
       </div>
     </main>
